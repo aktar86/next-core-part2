@@ -10,7 +10,7 @@ const Banner = () => {
     <div className="w-full  py-20 bg-blue-400 text-center">
       <Title>This is Home Components</Title>
 
-      <button onClick={handleBtn} className="btn-primary rounded-full mt-5">
+      <button onClick={handleBtn} className="btn-primary  mt-5">
         Show More
       </button>
     </div>

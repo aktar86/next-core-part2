@@ -38,13 +38,13 @@ const FoodCard = ({ food }) => {
         {/* Action Buttons */}
         <div className="flex items-center gap-3">
           <button className="flex-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 rounded-xl transition-colors duration-200 shadow-md shadow-orange-100 ">
-            <Link href={`/foods/${id}`}>Add to Cart</Link>
+            Add to Cart
           </button>
           <button
             href={`/foods/${id}`}
             className="flex-1 border border-gray-200 hover:bg-gray-50 text-gray-700 font-medium py-2.5 rounded-xl transition-colors duration-200"
           >
-            Details
+            <Link href={`/foods/${id}`}>Details</Link>
           </button>
         </div>
       </div>

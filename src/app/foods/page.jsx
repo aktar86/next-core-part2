@@ -20,7 +20,7 @@ const Foods = async () => {
       <Title>This is Foods page</Title>
       <p>Total Foods Data: {foods.length}</p>
 
-      <div className="my-10 bg-white inline-flex text-black  rounded overflow-hidden outline-0">
+      <div className="my-10 bg-white inline-flex text-black  rounded overflow-hidden ">
         <InputSearch />
       </div>
 

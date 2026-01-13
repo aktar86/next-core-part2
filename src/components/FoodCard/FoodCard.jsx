@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import AddToCartBtn from "../Buttons/AddToCartBtn";
 
 const FoodCard = ({ food }) => {
   const { id, catId, title, category, foodImg, price } = food;
@@ -37,9 +38,7 @@ const FoodCard = ({ food }) => {
 
         {/* Action Buttons */}
         <div className="flex items-center gap-3">
-          <button className="flex-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 rounded-xl transition-colors duration-200 shadow-md shadow-orange-100 ">
-            Add to Cart
-          </button>
+          <AddToCartBtn food={food} />
           <button
             href={`/foods/${id}`}
             className="flex-1 border border-gray-200 hover:bg-gray-50 text-gray-700 font-medium py-2.5 rounded-xl transition-colors duration-200"

@@ -1,8 +1,8 @@
 import { connect } from "@/app/lib/dbConnect";
+const feedbackCollection = connect("feedbacks");
 
 // GET Method: ডেটা পড়ার জন্য
 export async function GET(request) {
-  const feedbackCollection = connect("feedbacks");
   const result = await feedbackCollection.find().toArray();
 
   return Response.json(result);
@@ -22,21 +22,16 @@ export async function POST(request) {
     );
   }
 
-  const feedbackCollection = connect("feedbacks");
-
   const newFood = {
     message,
-    createdAt: new Date(),
+    createdAt: new Date().toISOString(),
   };
 
   const result = await feedbackCollection.insertOne(newFood);
 
-  return Response.json(
-    {
-      status: 201,
-      message: "Data saved successfully",
-      data: result,
-    },
-    { status: 201 },
-  );
+  return Response.json({
+    status: 201,
+    message: "Data saved successfully",
+    data: result,
+  });
 }

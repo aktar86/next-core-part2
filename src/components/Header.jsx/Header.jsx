@@ -16,6 +16,7 @@ const Header = () => {
           <Navlink href="/reviews"> Reviews</Navlink>
           <Navlink href="/contact"> Contact </Navlink>
           <Navlink href="/feedback"> Feedback </Navlink>
+          <Navlink href="/add"> Add Feedback </Navlink>
         </div>
         <button className="btn-primary">Login</button>
       </div>

@@ -1,4 +1,5 @@
 import FeedbackBtn from "@/components/Buttons/FeedbackBtn";
+import Link from "next/link";
 import React from "react";
 
 const getFeedback = async () => {
@@ -11,7 +12,15 @@ const FeedBack = async () => {
 
   return (
     <div>
-      Feedback {feedbacks.length}
+      <h3>Feedback {feedbacks.length}</h3>
+      <div className="my-10">
+        <Link
+          href={"/add"}
+          className="px-10 py-2 bg-amber-400 rounded-2xl my-10"
+        >
+          Add Feedback
+        </Link>
+      </div>
       <div className="grid grid-cols-3 gap-10">
         {feedbacks.map((feedback) => (
           <div
